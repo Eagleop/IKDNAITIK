@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyVideoSite</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Set the background color to black */
+            color: white; /* Set the text color to white */
+        }
+
+        header {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+            position: relative; /* Position the header container */
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .video {
+            margin-bottom: 20px;
+            border: 2px solid white; /* Add a white border around the videos */
+            padding: 10px; /* Add padding to create some space between the border and video content */
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 400px;
+        }
+
+        .video-title {
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: white; /* Set the video title color to white */
+        }
+
+        .video-description {
+            margin-bottom: 10px;
+        }
+
+        .comments-section {
+            background-color: #333333; /* Set the comments section background color */
+            color: white; /* Set the comments text color to white */
+            padding: 10px;
+        }
+
+        .comments-section button {
+            background-color: #FF0000;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .comment {
+            margin-bottom: 10px;
+        }
+
+        .comment .user {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .comment .content {
+            margin-left: 20px;
+        }
+
+        .menu-bar {
+            position: absolute; /* Position the menu bar */
+            top: 20px;
+            left: -250px; /* Initially hide the menu bar off-screen */
+            width: 200px;
+            height: calc(100vh - 60px); /* Adjust the height based on your content */
+            background-color: #333333;
+            color: white;
+            padding: 20px;
+            transition: left 0.3s ease-in-out; /* Add a transition for smooth animation */
+        }
+
+        .menu-bar.show {
+            left: 0; /* Show the menu bar when the 'show' class is added */
+        }
+
+        .menu-bar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .menu-bar-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu-bar-button span {
+            width: 20px;
+            height: 2px;
+            background-color: white;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function toggleMenuBar() {
+            var menuBar = document.getElementById("menuBar");
+            menuBar.classList.toggle("show");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to MyVideoSite</h1>
+        <button class="menu-bar-button" onclick="toggleMenuBar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-bar" id="menuBar">
+            <div class="menu-bar-logo">MyVideoSite</div>
+            <!-- Add your menu items here -->
+        </div>
+    </header>
+
+    <main>
+        <div class="video">
+            <h2 class="video-title">Video Title 1</h2>
+            <iframe src="https://www.youtube.com/embed/wd_2sFDFCAM" frameborder="0" allowfullscreen></iframe>
+            <p class="video-description">Video Description 1</p>
+        </div>
+        
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div class="comment">
+                <div class="user">User 1</div>
+                <div class="content">Comment 1</div>
+            </div>
+            <div class="comment">
+                <div class="user">User 2</div>
+                <div class="content">Comment 2</div>
+            </div>
+            <!-- Add more comments here -->
+            <button>Leave a Comment</button> <!-- Button for adding comments -->
+        </div>
+
+        <div class="video">
+            <h2 class="video-title">Video Title 2</h2>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+            <p class="video-description">Video Description 2</p>
+        </div>
+        
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div class="comment">
+                <div class="user">User 3</div>
+                <div class="content">Comment 3</div>
+            </div>
+            <div class="comment">
+                <div class="user">User 4</div>
+                <div class="content">Comment 4</div>
+            </div>
+            <!-- Add more comments here -->
+            <button>Leave a Comment</button> <!-- Button for adding comments -->
+        </div>
+
+        <!-- Add more video divs and comments sections here -->
+        
+    </main>
+
+    <footer>
+        &copy; 2023 MyVideoSite. All rights reserved.
+    </footer>
+</body>
+</html>
